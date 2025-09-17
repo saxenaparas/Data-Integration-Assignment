@@ -1,9 +1,9 @@
-## Quick Summary:
+## Quick Summary
 This repo contains the completed tasks for the `Data Integration Assignment 1`. Below you’ll find exact setup/run commands and **detailed purpose notes** for every folder and important file so reviewers can quickly understand what each item does.
 
 ---
 
-## Repository structure & purpose (file-by-file):
+## Repository structure & purpose (file-by-file)
 ```
 Data-Integration-Assignment-1/
 │
@@ -63,7 +63,7 @@ Data-Integration-Assignment-1/
 - **Optional-Enhancement** → run `npm install` inside `Optional-Enhancement` folder. This installs dependencies used by `Optional-Enhancement/server.js`. Then run `node server.js` (or `npm start` if configured).
 - Do **NOT** run `npm install` at the repo root unless you intend to install at root; dependency folders are contained per-task.
 
-**Commands (example):**
+**Commands (example)**
 ```bash
 # Task3&4
 cd "Task3&4"
@@ -88,7 +88,7 @@ python3 -m http.server 8005  # Task5 (open http://localhost:8005/index.html)
 python3 -m http.server 8006  # Task6 (open http://localhost:8006/index.html)
 ```
 
-- Node tasks (Task3&4, Optional-Enhancement):
+- Node tasks (Task3&4, Optional-Enhancement)
 ```bash
 cd "Task3&4"
 npm install
@@ -103,5 +103,6 @@ node server.js    # open http://localhost:3000 (or configured port)
 - If other endpoints exist in `server.js`, they are documented at the top of that file. Check `server.js` comments for implementation details and default port.
 
 ---
+
 #### 👨‍💻 Developed by **[Paras Saxena](https://saxenaparas.vercel.app/)**
 
