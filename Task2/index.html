@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+</head>
+<body>
+    <form onsubmit="greetUser(event)">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="greeting"></div>
+
+    <script>
+        function greetUser(event) {
+            event.preventDefault();
+            const name = document.getElementById('nameInput').value;
+            document.getElementById('greeting').innerHTML = `<h1>Hello ${name}</h1>`;
+        }
+    </script>
+</body>
+</html>

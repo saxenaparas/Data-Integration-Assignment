@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3 & 4</title>
+</head>
+<body>
+    <form onsubmit="greetUser(event)">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+        <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+    <div id="greeting"></div>
+
+    <script>
+        async function greetUser(event) {
+            event.preventDefault();
+            const name = document.getElementById('nameInput').value;
+            const response = await fetch('/greet', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: name })
+            });
+            const data = await response.json();
+            document.getElementById('greeting').innerHTML = `<h1>${data.message}</h1>`;
+        }
+
+        function resetForm() {
+            document.getElementById('nameInput').value = '';
+            document.getElementById('greeting').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

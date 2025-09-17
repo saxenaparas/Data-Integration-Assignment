@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All-in-One Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .valid { color: green; }
+        .invalid { color: red; }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>All-in-One Page</h1>
+
+    <!-- Greeting Section -->
+    <section id="greeting-section">
+        <h2>Greet by Name</h2>
+        <form onsubmit="greetUser(event)">
+            <input type="text" id="nameInput" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+            <button type="button" onclick="resetGreetingForm()">Reset</button>
+        </form>
+        <div id="greeting-result"></div>
+    </section>
+
+    <!-- JSON Validator Section -->
+    <section id="json-section">
+        <h2>JSON Validator</h2>
+        <textarea id="jsonInput" rows="10" placeholder='Enter JSON here, e.g., {"name": "John", "age": 30}'></textarea><br>
+        <button onclick="validateJSON()">Validate JSON</button>
+        <button onclick="resetJSONForm()">Reset</button>
+        <div id="json-result"></div>
+    </section>
+
+    <script>
+        // Greeting functions
+        async function greetUser(event) {
+            event.preventDefault();
+            const name = document.getElementById('nameInput').value;
+            try {
+                const response = await fetch('/greet', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: name })
+                });
+                const data = await response.json();
+                document.getElementById('greeting-result').innerHTML = `<h3>${data.message}</h3>`;
+            } catch (error) {
+                document.getElementById('greeting-result').innerHTML = `<p class="invalid">Error: ${error.message}</p>`;
+            }
+        }
+
+        function resetGreetingForm() {
+            document.getElementById('nameInput').value = '';
+            document.getElementById('greeting-result').innerHTML = '';
+        }
+
+        // JSON validation functions
+        function validateJSON() {
+            const input = document.getElementById('jsonInput').value;
+            try {
+                JSON.parse(input);
+                document.getElementById('json-result').innerHTML = '<p class="valid">&#x2714;&#xFE0F; Valid JSON</p>';
+            } catch (error) {
+                document.getElementById('json-result').innerHTML = '<p class="invalid">&#x2716;&#xFE0F; Invalid JSON</p>';
+            }
+        }
+
+        function resetJSONForm() {
+            document.getElementById('jsonInput').value = '';
+            document.getElementById('json-result').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

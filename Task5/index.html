@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+    <meta charset="UTF-8">
+    <style>
+        .valid { color: green; }
+        .invalid { color: red; }
+    </style>
+</head>
+<body>
+    <textarea id="jsonInput" rows="10" cols="50"></textarea><br>
+    <button onclick="validateJSON()">Submit</button>
+    <div id="result"></div>
+
+    <script>
+        function validateJSON() {
+            const input = document.getElementById('jsonInput').value;
+            try {
+                JSON.parse(input);
+                document.getElementById('result').innerHTML = 
+                    '<p class="valid">&#x2714;&#xFE0F; Valid JSON</p>';
+            } catch {
+                document.getElementById('result').innerHTML = 
+                    '<p class="invalid">&#x2716;&#xFE0F; Invalid JSON</p>';
+            }
+        }
+    </script>
+</body>
+</html>
