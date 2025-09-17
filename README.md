@@ -1,11 +1,12 @@
 ## Quick Summary:
-This repo contains the completed tasks for the Data Integration Assignment. Below you’ll find exact setup/run commands and **detailed purpose notes** for every folder and important file so reviewers can quickly understand what each item does.
+This repo contains the completed tasks for the Data Integration Assignment 1. Below you’ll find exact setup/run commands and **detailed purpose notes** for every folder and important file so reviewers can quickly understand what each item does.
 
 ---
 
 ## Repository structure & purpose (file-by-file):
 ```
-.
+Data-Integration-Assignment-1/
+│
 ├── Task1/
 │   ├── index.html           # Static greeting page (renders "Hello [Your Name]" or a welcome message)
 │   └── message_display.png  # Screenshot demonstrating the final rendered static page
