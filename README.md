@@ -102,5 +102,5 @@ node server.js    # open http://localhost:3000 (or configured port)
 - If other endpoints exist in `server.js`, they are documented at the top of that file. Check `server.js` comments for implementation details and default port.
 
 ---
-👨‍💻 Developed by **[Paras Saxena](https://saxenaparas.vercel.app/)**
+#### 👨‍💻 Developed by **[Paras Saxena](https://saxenaparas.vercel.app/)**
 
