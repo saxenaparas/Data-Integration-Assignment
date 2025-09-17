@@ -50,6 +50,7 @@ This repo contains the completed tasks for the Data Integration Assignment. Belo
 │       ├── invalid_json.png       # JSON validator failure screenshot 
 │       └── json_reset.png         # JSON validator reset screenshot 
 │
+├── .gitignore               
 ├── PARAS-v5.6.pdf           # My Resume
 └── README.md                # This readme (explain how to run everything + descriptions)
 ```
