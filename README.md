@@ -1,5 +1,5 @@
 ## Quick Summary:
-This repo contains the completed tasks for the Data Integration Assignment 1. Below you’ll find exact setup/run commands and **detailed purpose notes** for every folder and important file so reviewers can quickly understand what each item does.
+This repo contains the completed tasks for the `Data Integration Assignment 1`. Below you’ll find exact setup/run commands and **detailed purpose notes** for every folder and important file so reviewers can quickly understand what each item does.
 
 ---
 
