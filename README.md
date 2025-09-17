@@ -94,12 +94,13 @@ npm install
 node server.js    # open http://localhost:3000 (or configured port)
 ```
 
----
-👨‍💻 Developed by **[Paras Saxena](https://saxenaparas.vercel.app/)**
 
 ---
 
 ## API reference (Task3&4 & Optional-Enhancement)
 - `POST /greet` — Accepts JSON body `{ "name": "Paras" }` and returns `{ "message": "Hello Paras" }`
 - If other endpoints exist in `server.js`, they are documented at the top of that file. Check `server.js` comments for implementation details and default port.
+
+---
+👨‍💻 Developed by **[Paras Saxena](https://saxenaparas.vercel.app/)**
 
