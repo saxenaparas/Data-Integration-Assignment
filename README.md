@@ -95,6 +95,9 @@ node server.js    # open http://localhost:3000 (or configured port)
 ```
 
 ---
+👨‍💻 Developed by **[Paras Saxena](https://saxenaparas.vercel.app/)**
+
+---
 
 ## API reference (Task3&4 & Optional-Enhancement)
 - `POST /greet` — Accepts JSON body `{ "name": "Paras" }` and returns `{ "message": "Hello Paras" }`
